@@ -1,5 +1,6 @@
 
 window.addEventListener('message', function(eventData) {
+    console.error('Custom Function from Platform ------>>>>')
     try { 
          if(app.data){
            app.log(app.data);
