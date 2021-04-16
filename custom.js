@@ -1,5 +1,5 @@
 
-window.addEventListener('message', function(eventData) {
+window.addEventListener('click', function(eventData) {
     console.error('Custom Function from Platform ------>>>>')
     app.log(eventData);
     console.log(eventData);
