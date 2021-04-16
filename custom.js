@@ -8,6 +8,7 @@ window.addEventListener('message', function(eventData) {
         console.log(JSON.parse(ymEvent.data), "Event Data")
        console.log((JSON.parse(ymEvent.data)).event.code)
        let eventData = (JSON.parse(ymEvent.data)).event.code
+       console.log('Event Data---->',eventData)
         if (JSON.parse(eventData.data)) {
             console.log('Parse---->')
             let event = JSON.parse(eventData.data);
