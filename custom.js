@@ -1,4 +1,3 @@
-
 window.addEventListener('message', function(eventData) {
     console.log('onload---->')
     console.log(eventData);
@@ -8,18 +7,21 @@ window.addEventListener('message', function(eventData) {
         if (JSON.parse(eventData.data)) {
             console.log('Parse---->')
             let event = JSON.parse(eventData.data);
-             if (event.event_code == "custom-event" || event.data || event.data.code == "ym-client-event" || event.data.code == "clickedButton") {
-                app.log('Event Successfull');
-                console.log('Event Successfull');
+            console.log("event specs")
+            console.log(event)
+            console.log(typeof event)
+            console.log(event.event_code)
+            console.log(event.data, "Event Data ---->")
+            switch (event.event_code){
+                case "ym-client-event":
+                    console.log("event successful")
+                    break;
+                default:
+                    console.log("event unsuccessful")
+                    break;
             }
-            else if (event.event_code == "custom-event" || event.data || event.data.code == "ym-client-event" ||  event.data.code == "clickedButton"){
-                app.log('Event Successfull');
-                console.log('Event Successfull');
-                return;
-            } 
-            else{
-                return;
-            }
+            console.log("ending up here")
+            return;
          }
     } catch (error) {
         return;
