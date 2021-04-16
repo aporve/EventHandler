@@ -11,11 +11,11 @@ window.addEventListener('click', function(eventData) {
             let event = JSON.parse(eventData.data);
              if (event.event_code == "custom-event" || event.data || event.data.code == "ym-client-event" || event.data.code == "clickedButton") {
                 app.log('Event Successfull');
-                app.triggerIntent('vemo-2021-talking-points-asset-class-return-outlooks')
+                console.log('Event Successfull');
             }
             else if (event.event_code == "custom-event" || event.data || event.data.code == "ym-client-event" ||  event.data.code == "clickedButton"){
                 app.log('Event Successfull');
-                app.triggerIntent('vemo-2021-talking-points-asset-class-return-outlooks')
+                console.log('Event Successfull');
                 return;
             } 
             else{
