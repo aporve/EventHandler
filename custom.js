@@ -7,8 +7,11 @@ window.addEventListener('message', function(eventData) {
         let ymEvent = JSON.parse(eventData.data)
         console.log(JSON.parse(ymEvent.data), "Event Data")
        console.log((JSON.parse(ymEvent.data)).event.code)
-       let eventData = (JSON.parse(ymEvent.data)).event.code
-       console.log('Event Data---->',eventData)
+       if(((JSON.parse(ymEvent.data)).event.code) == 'clickedButton') {
+            console.log('Get Data');
+       }
+    //    let eventData = (JSON.parse(ymEvent.data)).event.code
+    //    console.log('Event Data---->',eventData)
         if (JSON.parse(eventData.data)) {
             console.log('Parse---->')
             let event = JSON.parse(eventData.data);
