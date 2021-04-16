@@ -13,6 +13,16 @@ window.addEventListener('message', function(eventData) {
        if(((JSON.parse(ymEvent.data)).event.code) == 'clickedButton') {
             console.log('Get Data');
             console.log(data.event.data);
+            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+                event_code: 'ym-client-event',
+                data: JSON.stringify({
+                event: {
+                     code: "clickedButton",
+                     data: data.event.data
+                    }
+                })
+           }), '*');
+           return;
        }
        
         if (JSON.parse(eventData.data)) {
