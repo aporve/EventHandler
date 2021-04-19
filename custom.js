@@ -17,7 +17,7 @@ window.addEventListener('message', function(eventData) {
                 event_code: 'ym-client-event',
                 data: JSON.stringify({
                 event: {
-                     code: "clickedButton",
+                     code: "Home",
                      data: data.event.data
                     }
                 })
@@ -32,7 +32,7 @@ window.addEventListener('message', function(eventData) {
             event_code: 'ym-client-event',
             data: JSON.stringify({
             event: {
-                 code: "clickedButton",
+                 code: "About",
                  data: data.event.data
                 }
             })
