@@ -10,7 +10,7 @@ window.addEventListener('message', function(eventData) {
         let data = JSON.parse(ymEvent.data);
         // console.log(data.event.code);
         // console.log(data.event.data);
-       if(((JSON.parse(ymEvent.data)).event.code) == 'clickedButton') {
+       if(((JSON.parse(ymEvent.data)).event.code) == 'Home') {
             console.log('Get Data');
             console.log(data.event.data);
             document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
@@ -24,6 +24,21 @@ window.addEventListener('message', function(eventData) {
            }), '*');
            return;
        }
+
+       if(((JSON.parse(ymEvent.data)).event.code) == 'About') {
+        console.log('Get Data');
+        console.log(data.event.data);
+        document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+            event_code: 'ym-client-event',
+            data: JSON.stringify({
+            event: {
+                 code: "clickedButton",
+                 data: data.event.data
+                }
+            })
+       }), '*');
+       return;
+   }
        
         if (JSON.parse(eventData.data)) {
             console.log('Parse---->')
