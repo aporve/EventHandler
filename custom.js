@@ -40,14 +40,14 @@ window.addEventListener('message', function(eventData) {
             return;
         }
 
-        if(((JSON.parse(ymEvent.data)).event.code) == 'Contact') {
+        if(((JSON.parse(ymEvent.data)).event.code) == 'ContactUs') {
             console.log('Get Data');
             console.log(data.event.data);
             document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
                 event_code: 'ym-client-event',
                 data: JSON.stringify({
                 event: {
-                    code: "Contact",
+                    code: "ContactUs",
                     data: data.event.data
                 }
             })
