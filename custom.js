@@ -6,7 +6,7 @@ window.addEventListener('message', function(eventData) {
         // console.log(JSON.parse(eventData.data));
         let ymEvent = JSON.parse(eventData.data)
         // console.log(JSON.parse(ymEvent.data), "Event Data")
-    //    console.log((JSON.parse(ymEvent.data)).event.code)
+        //    console.log((JSON.parse(ymEvent.data)).event.code)
         let data = JSON.parse(ymEvent.data);
         // console.log(data.event.code);
         // console.log(data.event.data);
@@ -26,19 +26,34 @@ window.addEventListener('message', function(eventData) {
        }
 
        if(((JSON.parse(ymEvent.data)).event.code) == 'About') {
-        console.log('Get Data');
-        console.log(data.event.data);
-        document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
-            event_code: 'ym-client-event',
-            data: JSON.stringify({
-            event: {
-                 code: "About",
-                 data: data.event.data
+            console.log('Get Data');
+            console.log(data.event.data);
+            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+                event_code: 'ym-client-event',
+                data: JSON.stringify({
+                event: {
+                    code: "About",
+                    data: data.event.data
                 }
             })
-       }), '*');
-       return;
-   }
+            }), '*');
+            return;
+        }
+
+        if(((JSON.parse(ymEvent.data)).event.code) == 'Contact') {
+            console.log('Get Data');
+            console.log(data.event.data);
+            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+                event_code: 'ym-client-event',
+                data: JSON.stringify({
+                event: {
+                    code: "Contact",
+                    data: data.event.data
+                }
+            })
+            }), '*');
+            return;
+        }
        
         if (JSON.parse(eventData.data)) {
             console.log('Parse---->')
