@@ -13,17 +13,45 @@ window.addEventListener('message', function(eventData) {
        if(((JSON.parse(ymEvent.data)).event.code) == 'Home') {
             console.log('Get Data');
             console.log(data.event.data);
-            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+            document.getElementById('ymIframe').contentWindow.postMessage({
                 event_code: 'ym-client-event',
                 data: JSON.stringify({
                 event: {
                      code: "Home",
-                     data: data.event.data
+                     data: clickedButton
                     }
                 })
-           }), '*');
+           }, '*');
+        //     document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+        //         event_code: 'ym-client-event',
+        //         data: JSON.stringify({
+        //         event: {
+        //              code: "Home",
+        //              data: data.event.data
+        //             }
+        //         })
+        //    }), '*');
            return;
        }
+
+
+       function sendEvent1(btnID) {
+        let clickedButton = btnID;
+        // alert(clickedButton);
+        console.log('Testing ----->>>');
+        $("#logoN").text('VEMO 2021');
+        document.getElementById('ymIframe').contentWindow.postMessage({
+            event_code: 'ym-client-event',
+            data: JSON.stringify({
+            event: {
+                 code: "Home",
+                 data: clickedButton
+                }
+            })
+       }, '*');
+       return;
+    }
+
 
        if(((JSON.parse(ymEvent.data)).event.code) == 'About') {
             console.log('Get Data');
