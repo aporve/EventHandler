@@ -13,24 +13,15 @@ window.addEventListener('message', function(eventData) {
        if(((JSON.parse(ymEvent.data)).event.code) == 'Home') {
             console.log('Get Data');
             console.log(data.event.data);
-            document.getElementById('ymIframe').contentWindow.postMessage({
+            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
                 event_code: 'ym-client-event',
                 data: JSON.stringify({
                 event: {
                      code: "Home",
-                     data: clickedButton
+                     data: data.event.data
                     }
                 })
-           }, '*');
-        //     document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
-        //         event_code: 'ym-client-event',
-        //         data: JSON.stringify({
-        //         event: {
-        //              code: "Home",
-        //              data: data.event.data
-        //             }
-        //         })
-        //    }), '*');
+           }), '*');
            return;
        }
 
