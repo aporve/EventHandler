@@ -15,17 +15,17 @@ window.addEventListener('message', function(eventData) {
             console.log(data.event.data);
             document.getElementById('ymIframe').contentWindow.postMessage({
                 event_code: 'ym-client-event',
-                // data: JSON.stringify({
-                event: {
+                data: {
+                    event: {
                      code: "Home",
-                     data: data.event.data
+                     data: ""
                     }
-                // })
+                }
            }, '*');
            return;
        }
 
-
+     
        function sendEvent1(btnID) {
         let clickedButton = btnID;
         // alert(clickedButton);
