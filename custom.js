@@ -1,8 +1,3 @@
-
-
-
-$(document).ready(function() { document.getElementById("chatDetails").style.display="none"; });
-
 window.addEventListener('message', function(eventData) {
     console.log('onload---->')
     console.log(eventData);
