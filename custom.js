@@ -10,14 +10,14 @@ window.addEventListener('message', function(eventData) {
         let data = JSON.parse(ymEvent.data);
         console.log(data.event.code, "Data------>");
         // console.log(data.event.data);
-       if(((JSON.parse(ymEvent.data)).event.code) == 'Home') {
+       if(((JSON.parse(ymEvent.data)).event.code) == 'VEMO') {
             console.log('Get Data');
             console.log(data.event.data);
             document.getElementById('ymIframe').contentWindow.postMessage({
                 event_code: 'ym-client-event',
                 data: {
                     event: {
-                     code: "Home",
+                     code: "VEMO",
                      data: ""
                     }
                 }
@@ -25,52 +25,110 @@ window.addEventListener('message', function(eventData) {
            return;
        }
 
-     
-       function sendEvent1(btnID) {
-        let clickedButton = btnID;
-        // alert(clickedButton);
-        console.log('Testing ----->>>');
-        $("#logoN").text('VEMO 2021');
-        document.getElementById('ymIframe').contentWindow.postMessage({
-            event_code: 'ym-client-event',
-            data: JSON.stringify({
-            event: {
-                 code: "Home",
-                 data: clickedButton
-                }
-            })
-       }, '*');
-       return;
-    }
 
-
-       if(((JSON.parse(ymEvent.data)).event.code) == 'About') {
+       if(((JSON.parse(ymEvent.data)).event.code) == 'ACTIVE') {
             console.log('Get Data');
             console.log(data.event.data);
-            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+            document.getElementById('ymIframe').contentWindow.postMessage({
                 event_code: 'ym-client-event',
-                data: JSON.stringify({
-                event: {
-                    code: "About",
-                    data: data.event.data
+                data: {
+                    event: {
+                     code: "ACTIVE",
+                     data: ""
+                    }
                 }
-            })
-            }), '*');
+           }, '*');
             return;
         }
 
-        if(((JSON.parse(ymEvent.data)).event.code) == 'ContactUs') {
+        if(((JSON.parse(ymEvent.data)).event.code) == 'ASSET') {
             console.log('Get Data');
             console.log(data.event.data);
-            document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+            document.getElementById('ymIframe').contentWindow.postMessage({
                 event_code: 'ym-client-event',
-                data: JSON.stringify({
-                event: {
-                    code: "ContactUs",
-                    data: data.event.data
+                data: {
+                    event: {
+                     code: "ASSET",
+                     data: ""
+                    }
                 }
-            })
-            }), '*');
+           }, '*');
+            return;
+        }
+
+        if(((JSON.parse(ymEvent.data)).event.code) == 'ECON') {
+            console.log('Get Data');
+            console.log(data.event.data);
+            document.getElementById('ymIframe').contentWindow.postMessage({
+                event_code: 'ym-client-event',
+                data: {
+                    event: {
+                     code: "ECON",
+                     data: ""
+                    }
+                }
+           }, '*');
+            return;
+        }
+
+
+        if(((JSON.parse(ymEvent.data)).event.code) == 'INVESTOR') {
+            console.log('Get Data');
+            console.log(data.event.data);
+            document.getElementById('ymIframe').contentWindow.postMessage({
+                event_code: 'ym-client-event',
+                data: {
+                    event: {
+                     code: "INVESTOR",
+                     data: ""
+                    }
+                }
+           }, '*');
+            return;
+        }
+
+        if(((JSON.parse(ymEvent.data)).event.code) == 'POPFAQ') {
+            console.log('Get Data');
+            console.log(data.event.data);
+            document.getElementById('ymIframe').contentWindow.postMessage({
+                event_code: 'ym-client-event',
+                data: {
+                    event: {
+                     code: "POPFAQ",
+                     data: ""
+                    }
+                }
+           }, '*');
+            return;
+        }
+
+        if(((JSON.parse(ymEvent.data)).event.code) == 'RETIREMENT') {
+            console.log('Get Data');
+            console.log(data.event.data);
+            document.getElementById('ymIframe').contentWindow.postMessage({
+                event_code: 'ym-client-event',
+                data: {
+                    event: {
+                     code: "RETIREMENT",
+                     data: ""
+                    }
+                }
+           }, '*');
+            return;
+        }
+
+        if(((JSON.parse(ymEvent.data)).event.code) == 'VCMM') {
+            console.log('Get Data');
+            console.log(data.event.data);
+            document.getElementById('ymIframe').contentWindow.postMessage({
+                event_code: 'ym-client-event',
+                data: {
+                    event: {
+                     code: "VCMM",
+                     data: ""
+                    }
+                }
+           }, '*');
             return;
         }
        
