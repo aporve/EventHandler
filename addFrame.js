@@ -55,7 +55,7 @@
 
   document.getElementById('e1').onclick = function () {
     // parent.postMessage("message to be sent", "http://the-website-that-will-receive-the-msg.com")
-    parent.postMessage("VEMO", "*")
+    parent.postMessage("ACTIVE", "*")
 };
 
 document.getElementById('e2').onclick = function () {
