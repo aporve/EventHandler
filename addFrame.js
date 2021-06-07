@@ -5,11 +5,11 @@
         `<div>
             <div style="position: absolute; top: 0; left: 0px; right: 0; bottom: 0;">
                 <ul class="sc-eCApnc jvVggF" style="display: flex; flex-direction: column; justify-content: center; background-color: #fff; padding: 0; width: 3rem; list-style: none; height: calc(100% - 55px); justify-content: space-between;border: 1px solid #ccc">
-                    <a to="/" class="sc-jSFjdj jcTaHb" style="text-decoration: none; color: #fff; width: 100%; padding: 1rem; cursor: pointer; display: flex;">
+                    <a to="/" onclick="sendEvent('VEMO')" class="sc-jSFjdj jcTaHb" style="text-decoration: none; color: #fff; width: 100%; padding: 1rem; cursor: pointer; display: flex;">
                         <img src="https://cdn.yellowmessenger.com/LS9XYE9urVcj1605084428877.png" style="width: 1.2rem; height: auto; " />
                     </a>
                     <a href="#" onclick="sendEvent('VEMO')" class="sc-jSFjdj jcTaHb" style="text-decoration: none; color: #fff; width: 100%; padding: 1rem; cursor: pointer; display: flex;">
-                        <img src="https://cdn.yellowmessenger.com/GnxBWRVeIm6i1622800692538.png" style="width: 1.2rem; height: auto;" />
+                        <img src="https://cdn.yellowmessenger.com/LS9XYE9urVcj1605084428877.png" style="width: 1.2rem; height: auto;" />
                     </a>
                     <a href="#" onclick="sendEvent('ACTIVE')" class="sc-jSFjdj jcTaHb" style="text-decoration: none; color: #fff; width: 100%; padding: 1rem; cursor: pointer; display: flex;">
                         <img src="https://cdn.yellowmessenger.com/4dnzmSDugrwW1622800597860.png" style="width: 1.2rem; height: auto;" />
@@ -60,7 +60,7 @@ function sendEvent(btnID) {
         event_code: 'ym-client-event',
         data: {
             event: {
-             code: btn,
+             code: 'ACTIVE',
              data: ""
             }
         }
