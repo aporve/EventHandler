@@ -55,40 +55,40 @@
 
   document.getElementById('e1').onclick = function () {
     // parent.postMessage("message to be sent", "http://the-website-that-will-receive-the-msg.com")
-    parent.postMessage("myevent", "*")
+    parent.postMessage("VEMO", "*")
 };
 
 document.getElementById('e2').onclick = function () {
     // parent.postMessage("message to be sent", "http://the-website-that-will-receive-the-msg.com")
-    parent.postMessage("myevent", "*")
+    parent.postMessage("ACTIVE", "*")
 };
 
 document.getElementById('e3').onclick = function () {
     // parent.postMessage("message to be sent", "http://the-website-that-will-receive-the-msg.com")
-    parent.postMessage("myevent", "*")
+    parent.postMessage("ASSET", "*")
 };
 
 document.getElementById('e4').onclick = function () {
     // parent.postMessage("message to be sent", "http://the-website-that-will-receive-the-msg.com")
-    parent.postMessage("myevent", "*")
+    parent.postMessage("ECON", "*")
 };
 
 document.getElementById('e5').onclick = function () {
     // parent.postMessage("message to be sent", "http://the-website-that-will-receive-the-msg.com")
-    parent.postMessage("myevent", "*")
+    parent.postMessage("INVESTOR", "*")
 };
 
 document.getElementById('e6').onclick = function () {
     // parent.postMessage("message to be sent", "http://the-website-that-will-receive-the-msg.com")
-    parent.postMessage("myevent", "*")
+    parent.postMessage("POPFAQ", "*")
 };
 
 document.getElementById('e7').onclick = function () {
     // parent.postMessage("message to be sent", "http://the-website-that-will-receive-the-msg.com")
-    parent.postMessage("myevent", "*")
+    parent.postMessage("RETIREMENT", "*")
 };
 
 document.getElementById('e8').onclick = function () {
     // parent.postMessage("message to be sent", "http://the-website-that-will-receive-the-msg.com")
-    parent.postMessage("myevent", "*")
+    parent.postMessage("VCMM", "*")
 };
