@@ -1,5 +1,6 @@
 (function addFrames () {
     try {    
+      document.getElementById('player').style.width= '0px'
       document.querySelector('#chatContainer').insertAdjacentHTML(
         'afterbegin',
         `<div>
@@ -38,10 +39,10 @@
                 <ul class="sc-eCApnc jvVggF" style="display: flex; flex-direction: row; align-items: center; justify-content: flex-end; background-color: #fff; padding: 0; list-style: none; height: 3rem;border: 1px solid #ccc;border-left: 0">
                     <div>
                         <a to="/" href="#" class="sc-jSFjdj jcTaHb" style="text-decoration: none; color: #fff; width: 100%; padding: 1rem; cursor: pointer;">
-                            <img src="https://cdn.yellowmessenger.com/LS9XYE9urVcj1605084428877.png" style="width: 1.2rem; height: auto;" />
+                            <img src="https://cdn.yellowmessenger.com/mv8YPnKAfFOm1623088433384.png" style="width: 1.2rem; height: auto;" />
                         </a>
                         <a to="/" href="#" class="sc-jSFjdj jcTaHb" style="text-decoration: none; color: #fff; width: 100%; padding: 1rem; cursor: pointer;">
-                            <img src="https://cdn.yellowmessenger.com/LS9XYE9urVcj1605084428877.png" style="width: 1.2rem; height: auto;" />
+                            <img src="https://cdn.yellowmessenger.com/DOZyHmvCcjee1623088538196.jpg" style="width: 1.2rem; height: auto;" />
                         </a>
                     </div>
                 </ul>
