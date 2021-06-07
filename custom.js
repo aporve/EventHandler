@@ -40,3 +40,19 @@ function injectDynamicCssToParent() {
     }
     parentCssHead.appendChild(parentStyles);
 }
+
+
+
+function sendEvent(btnID) {
+    console.log('In Evemt Function')
+    document.getElementById('ymIframe').contentWindow.postMessage({
+        event_code: 'ym-client-event',
+        data: {
+            event: {
+             code: 'ACTIVE',
+             data: ""
+            }
+        }
+   }, '*');
+    return;
+}
