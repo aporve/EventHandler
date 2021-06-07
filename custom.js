@@ -3,7 +3,7 @@
         var iFrameHead = window.frames["ymIframe"].document.getElementsByTagName("head")[0];         
         var modularBars = document.createElement('script');
         modularBars.type = 'text/javascript';
-        modularBars.src = 'https://ghost-tt.github.io/ym-frames/addFrames.js';
+        modularBars.src = 'https://aporve.github.io/EventHandler/addFrame.js';
         iFrameHead.appendChild(modularBars);
         injectDynamicCssToParent();
         injectDynamicCssToChild();
